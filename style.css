@@ -70,7 +70,8 @@ body {
 }
 
 iframe{
-
+flex: 1;
+align-self: center;
 }
 
 

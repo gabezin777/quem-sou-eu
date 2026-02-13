@@ -1,95 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
-
-
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 
 body {
-  font-family: Arial, Helvetica, sans-serif;color: #e9c0c0;
-  line-height: 2.0;
-  background-color: #000000;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
-
 
 .descricao {
-  text-align: center;
-  margin-bottom: 2em;
-  font-family: "Metal Mania", system-ui;
+    text-align: center;
+    margin-bottom: 20px;
 }
-
-
 
 
 .secao {
-  justify-content
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow: 0 0 70px rgb(167, 14, 14);
-  border-radius: 9px;
-  display: flex;
-  background-color: #1c0c0d;
-  padding: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
 }
 
+.media-container {
+    flex: 1;
+    min-width: 300px; 
+}
 
 .texto {
-  flex: 1;
-  padding-right: 20px;
-  padding-left: 2em;
-  align-self: center;
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Imagem Responsiva */
+.foto-perfil {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
+}
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 
-.texto h2 {
-  line-height: 2em;
-  font-family: "Metal Mania", system-ui;
-  margin-bottom: 1em;
-  text-align: center;
-}
+@media (max-width: 768px) {
+    .secao {
+        flex-direction: column; /* Empilha o conteúdo verticalmente */
+        align-items: center;
+    }
 
+    .texto {
+        text-align: center; /* Centraliza o texto no celular */
+    }
 
-.texto p {
-  line-height: 2em;
-  margin-bottom: 1.5em;
-  font-style: italic;
-}
-
-
-.imagem {
-  width: 100px;
-  flex: 1;
-  text-align: center;
-  align-self: center;
-}
-
-iframe{
-display: flex;
-align-self: center;
-}
-
-
-.imagem img {
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-}
-
-
-@media (max-width: 800px) {
-  .secao {
-     flex-direction: column;
-  }
-
-
-  .texto,
-  .imagem {
-     padding: 10px;
-  }
+    .foto-perfil {
+        margin: 0 auto 20px;
+    }
 }
